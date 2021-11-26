@@ -30,6 +30,6 @@ export default {
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 </style>
