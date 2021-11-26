@@ -90,7 +90,7 @@ header {
         button {
             border: 1px solid white;
             background-color: white;
-            color: #1fad96;
+            color: #41c457;
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
             height: 48px;

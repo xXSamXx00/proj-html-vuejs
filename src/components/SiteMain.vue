@@ -12,14 +12,14 @@
                 <path class="elementor-shape-fill" d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"></path>
             </svg>
             <div class="thumb_image mt-4">
-                <img class="position-absolute left_image" src="../assets/images/home-6-hero-left-person.png" alt="Donna al computer">
-                <div class="main_image">
-                    <img class="position-relative" src="../assets/images/home-6-hero-poster-final.jpg" alt="Hero Image">
+                <img class="position-absolute center_image" src="../assets/images/home-6-hero-poster-final.jpg" alt="Hero Image">
+                <div class="side_image">
+                        <img class="position-absolute left_image" src="../assets/images/home-6-hero-left-person.png" alt="Donna al computer">
+                        <img class="position-absolute right_image" src="../assets/images/home-6-hero-right-person.png" alt="Donna al computer">
                     <div class="youtube_play">
                         <img src="../assets/images/icon-youtube-play.png" alt="Youtube play">
                     </div>
                 </div>
-                <img class="position-absolute right_image" src="../assets/images/home-6-hero-right-person.png" alt="Donna al computer">
             </div>
             <div class="icons">
                 <div class="icon">
@@ -69,6 +69,51 @@
                         <p class="text-uppercase fw-bold">Satisfaction rate</p>
                     </div>
                 </div>
+                <div class="services">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card_clients">
+                                <div class="card_text">
+                                    <h3>Graphic Design</h3>
+                                    <p>Have a passion for graphics and arts? Show your talents with confidence and self-assertiveness.</p>
+                                </div>
+                                <div class="card_image">
+                                    <img src="../assets/images/home-6-service-image-01.png" alt="Persona al computer">
+                                </div>
+                            </div>
+                            <div class="card_clients">
+                                <div class="card_text">
+                                    <h3>Business Administration</h3>
+                                    <p>Learners are encouraged to study the mechanism and structure of system administration.</p>
+                                </div>
+                                <div class="card_image">
+                                    <img src="../assets/images/home-6-service-image-02.png" alt="Persona al computer">
+                                </div>
+                            </div>
+                            <div class="card_clients">
+                                <div class="card_image">
+                                    <img src="../assets/images/home-6-service-image-03.png" alt="Persona al computer">
+                                </div>
+                                <div class="card_text">
+                                    <h3>Idea Discussion</h3>
+                                    <p>Get teamed up with the specialists who work and teach coding for years at famous universities.</p>
+                                </div>
+                            </div>
+                            <div class="card_clients">
+                                <div class="card_image">
+                                    <img src="../assets/images/home-6-service-image-04.png" alt="Persona al computer">
+                                </div>
+                                <div class="card_text">
+                                    <h3>Web Development</h3>
+                                    <p>Learn to start building a webpage from scratch. You decide your own pace, course and speed.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -96,16 +141,16 @@ export default {
         }
     } 
     .button {
-        background-color: #27ab94;
+        background-color: #41c457;
         color: white;
-        border: 1px solid #27ab94;
+        border: 1px solid #41c457;
         border-radius: 5px;
         padding: 12px 30px;
         font-size: 12px;
         font-weight: 600;
         transition: 0.5s;
         &:hover {
-            color: #27ab94;
+            color: #41c457;
             background-color: white;
         }
     }
@@ -123,31 +168,35 @@ export default {
     }
     .thumb_image {
         position: relative;
-        .main_image {
-            position: absolute;
-            display: inline-block;
+        height: 453px;
+        width: 700px;
+        margin: auto;
+        .center_image {
             border: 15px solid white;
             border-radius: 15px;
             left: 50%;
             transform: translate(-50%);
+            box-shadow: 0px 0px 10px #cacaca;
+            z-index: 1;
+        }
+        .side_image {
+            height: 100%;
+            position: relative;
             .youtube_play {
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                z-index: 1;
             }
         }
         .left_image {
-            left: 218px;
-            top: -42px;
-            position: relative;
-            z-index: 0;
+            left: -55%;
+            top: -10%;
         }
         .right_image {
-            left: 1335px;
-            top: 285px;
-            position: relative;
-            z-index: 0;
+            left: 105%;
+            top: 63%;
         }
     }
     .icons {
@@ -170,11 +219,10 @@ export default {
     }
 }
 .clients {
-    background-color: #f6f3f6;
     background-image: url(../assets/images/background-pattern-grid-line.png);
     background-position: center;
     .pb_cont {
-        background-color: #f6f3f6;
+        background-color: white;
         position: relative;
         top: 115px;
         padding-top: 200px;
@@ -253,7 +301,8 @@ export default {
         .empty_orange {
             height: 60px;
             width: 60px;
-            right: 0;
+            right: -10px;
+            bottom: 140px;
             border: 8px solid #FF8265;
         }
         .rating {
@@ -261,7 +310,7 @@ export default {
             justify-content: space-between;
             margin-top: 150px;
             .number {
-                color: #27ab94;
+                color: #41c457;
                 font-size: 3rem;
                 font-weight: bold;
                 margin: 0;
