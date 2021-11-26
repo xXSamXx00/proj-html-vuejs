@@ -28,7 +28,9 @@ export default {
 
 <style lang="scss">
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
 }

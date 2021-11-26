@@ -1,7 +1,7 @@
 <template>
     <main>
         <div class="hero_image">
-            <div class="text-center">
+            <div class="text text-center">
                 <h1>Learn At Your Own Pace!</h1>
                 <p>Get teamed up with people of the same will.</p>
                 <button class="button mb-5">Get started for free</button>
@@ -21,8 +21,56 @@
                 </div>
                 <img class="position-absolute right_image" src="../assets/images/home-6-hero-right-person.png" alt="Donna al computer">
             </div>
+            <div class="icons">
+                <div class="icon">
+                    <i class="fas fa-ruler-combined"></i>
+                </div>
+                <div class="icon">
+                    <i class="far fa-life-ring"></i>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
         </div>
-        <div class="next"></div>
+        <div class="clients">
+            <div class="container pb_cont">
+                <div class="text text-center">
+                    <h2>Let passion and determination be the guide along the way and develop at your own pace that's comfortable.</h2>
+                    <p class="text-uppercase fw-bold">fannie moreno</p>
+                    <p>/Founder & CEO</p>
+                </div>
+                <div class="ball full_green"></div>
+                <div class="ball empty_green"></div>
+                <div class="ball full_purple"></div>
+                <div class="ball full_red"></div>
+                <div class="ball full_orange"></div>
+                <div class="ball full_blue"></div>
+                <div class="ball full_yellow"></div>
+                <div class="ball empty_orange"></div>
+                <div class="rating text-center">
+                    <div class="col-3">
+                        <p class="number">1.926</p>
+                        <p class="text-uppercase fw-bold">Finished sessions</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="number">3.092+</p>
+                        <p class="text-uppercase fw-bold">Enrolled Learner</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="number">200</p>
+                        <p class="text-uppercase fw-bold">online Instructors</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="number">100%</p>
+                        <p class="text-uppercase fw-bold">Satisfaction rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 </template>
 
@@ -40,31 +88,35 @@ export default {
     color: white;
     height: 650px;
     position: relative;
-    h1 {
-        font-weight: 600;
-    }
+    .text {
+        position: relative;
+        z-index: 1;
+        h1 {
+            font-weight: 600;
+        }
+    } 
     .button {
-        background-color: #1fad96;
+        background-color: #27ab94;
         color: white;
-        border: 1px solid #1fad96;
+        border: 1px solid #27ab94;
         border-radius: 5px;
         padding: 12px 30px;
         font-size: 12px;
         font-weight: 600;
         transition: 0.5s;
         &:hover {
-            color: #1fad96;
+            color: #27ab94;
             background-color: white;
         }
     }
     svg {
         position: absolute;
-        bottom: 0;
+        bottom: -6px;
         transform: rotate(180deg);
         display: block;
-        width: calc(100% + 1.3px);
-        height: 654px;
-        z-index: -1;
+        width: 100%;
+        height: 550px;
+        z-index: 0;
         path {
             fill: rgba(255, 255, 255, 0.04);
         }
@@ -88,15 +140,136 @@ export default {
         .left_image {
             left: 218px;
             top: -42px;
+            position: relative;
+            z-index: 0;
         }
         .right_image {
             left: 1335px;
             top: 285px;
+            position: relative;
+            z-index: 0;
+        }
+    }
+    .icons {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 100px;
+        background-color: white;
+        color: black;
+        font-size: 14px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        text-align: center;
+        .icon {
+            height: 35px;
+            width: 35px;
+            line-height: 35px;
+            cursor: pointer;
         }
     }
 }
-.next {
-    height: 600px;
+.clients {
     background-color: #f6f3f6;
+    background-image: url(../assets/images/background-pattern-grid-line.png);
+    background-position: center;
+    .pb_cont {
+        background-color: #f6f3f6;
+        position: relative;
+        top: 115px;
+        padding-top: 200px;
+        background-image: url(../assets/images/background-pattern-grid-line.png);
+        background-position: center;
+        .text {
+            padding: 0 300px;
+            h2 {
+                font-size: 30px;
+                font-weight: 600;
+                margin-bottom: 40px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+        .ball {
+            position: absolute;
+            border-radius: 50%;
+            filter: opacity(0.5);
+        }
+        .full_green {
+            height: 25px;
+            width: 50px;
+            background-color: #1fad96;
+            top: 0;
+            right: 0;
+            border-radius: 0 0 150px 150px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        .empty_green {
+            height: 55px;
+            width: 55px;
+            top: 50px;
+            left: 0;
+            border: 6px solid #1fad96;
+        }
+        .full_purple {
+            height: 20px;
+            width: 20px;
+            background-color: #7355e7;
+            top: 120px;
+            left: 40%;
+            filter: opacity(0.7);
+        }
+        .full_red {
+            height: 30px;
+            width: 30px;
+            background-color: #e25a6d;
+            right: 0;
+            top: 230px;
+            filter: opacity(0.7);
+        }
+        .full_orange {
+            height: 30px;
+            width: 30px;
+            background-color: #FF8265;
+            filter: opacity(1);
+            top: 260px;
+        }
+        .full_blue {
+            height: 30px;
+            width: 30px;
+            background-color: #1f9efb;
+            top: 350px;
+            right: 200px;
+        }
+        .full_yellow {
+            height: 50px;
+            width: 50px;
+            background-color: #febc4d;
+            left: -120px;
+            filter: opacity(1);
+        }
+        .empty_orange {
+            height: 60px;
+            width: 60px;
+            right: 0;
+            border: 8px solid #FF8265;
+        }
+        .rating {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 150px;
+            .number {
+                color: #27ab94;
+                font-size: 3rem;
+                font-weight: bold;
+                margin: 0;
+            }
+            p {
+                color: #696969;
+            }
+        }
+    }
 }
 </style>
