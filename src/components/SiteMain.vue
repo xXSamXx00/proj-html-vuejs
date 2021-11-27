@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <div class="clients">
+        <div class="main_content">
             <div class="container pb_cont">
                 <div class="text text-center">
                     <h2>Let passion and determination be the guide along the way and develop at your own pace that's comfortable.</h2>
@@ -71,47 +71,69 @@
                 </div>
                 <div class="services">
                     <div class="row">
-                        <div class="col-6">
-                            <div class="card_clients">
-                                <div class="card_text">
-                                    <h3>Graphic Design</h3>
-                                    <p>Have a passion for graphics and arts? Show your talents with confidence and self-assertiveness.</p>
+                        <div class="col-6 d-flex justify-content-evenly">
+                            <div class="card_left">
+                                <div class="card_clients">
+                                    <div class="card_text_top">
+                                        <h3>Graphic Design</h3>
+                                        <p>Have a passion for graphics and arts? Show your talents with confidence and self-assertiveness.</p>
+                                    </div>
+                                    <div class="card_image text-center">
+                                        <img src="../assets/images/home-6-service-image-01.png" alt="Persona al computer">
+                                    </div>
                                 </div>
-                                <div class="card_image">
-                                    <img src="../assets/images/home-6-service-image-01.png" alt="Persona al computer">
-                                </div>
-                            </div>
-                            <div class="card_clients">
-                                <div class="card_text">
-                                    <h3>Business Administration</h3>
-                                    <p>Learners are encouraged to study the mechanism and structure of system administration.</p>
-                                </div>
-                                <div class="card_image">
-                                    <img src="../assets/images/home-6-service-image-02.png" alt="Persona al computer">
-                                </div>
-                            </div>
-                            <div class="card_clients">
-                                <div class="card_image">
-                                    <img src="../assets/images/home-6-service-image-03.png" alt="Persona al computer">
-                                </div>
-                                <div class="card_text">
-                                    <h3>Idea Discussion</h3>
-                                    <p>Get teamed up with the specialists who work and teach coding for years at famous universities.</p>
+                                <div class="card_clients">
+                                    <div class="card_image">
+                                        <img src="../assets/images/home-6-service-image-03.png" alt="Persona al computer">
+                                    </div>
+                                    <div class="card_text_bottom">
+                                        <h3>Idea Discussion</h3>
+                                        <p>Get teamed up with the specialists who work and teach coding for years at famous universities.</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card_clients">
-                                <div class="card_image">
-                                    <img src="../assets/images/home-6-service-image-04.png" alt="Persona al computer">
+                            <div class="card_right">
+                                <div class="card_clients">
+                                    <div class="card_text_top">
+                                        <h3>Business Administration</h3>
+                                        <p>Learners are encouraged to study the mechanism and structure of system administration.</p>
+                                    </div>
+                                    <div class="card_image text-center">
+                                        <img src="../assets/images/home-6-service-image-02.png" alt="Persona al computer">
+                                    </div>
                                 </div>
-                                <div class="card_text">
-                                    <h3>Web Development</h3>
-                                    <p>Learn to start building a webpage from scratch. You decide your own pace, course and speed.</p>
+                                <div class="card_clients">
+                                    <div class="card_image text-center">
+                                        <img src="../assets/images/home-6-service-image-04.png" alt="Persona al computer">
+                                    </div>
+                                    <div class="card_text_bottom">
+                                        <h3>Web Development</h3>
+                                        <p>Learn to start building a webpage from scratch. You decide your own pace, course and speed.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
-
+                        <div class="col-6 d-flex align-items-center">
+                            <div class="text_clients">
+                                <div class="title">
+                                    <p>Together We Can Create</p>
+                                    <h2>Services We <span>Can Provide</span> For My Clients.</h2>
+                                </div>
+                                <div class="main_text">
+                                    <p><i class="fas fa-check"></i> Select & customize courses to your preferences</p>
+                                    <p><i class="fas fa-check"></i> Change the tutor and make arrangements</p>
+                                    <p><i class="fas fa-check"></i> Participate in events to join others</p>
+                                    <p><i class="fas fa-check"></i> Get the desired certificate delivered at house</p>
+                                </div>
+                                <button class="button mt-4">Get started for free</button>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <div class="courses">
+                    <div class="title text-center">
+                        <p>Choose a course to get started</p>
+                        <h2>Latest Featured <span>Courses</span></h2>
                     </div>
                 </div>
             </div>
@@ -127,6 +149,36 @@ export default {
 </script>
 
 <style lang="scss">
+.button {
+    background-color: #41c457;
+    color: white;
+    border: 1px solid #41c457;
+    border-radius: 5px;
+    padding: 15px 35px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.5s;
+    &:hover {
+        color: #41c457;
+        background-color: white;
+    }
+}
+.title {
+    p {
+        text-transform: uppercase;
+        color: #696969;
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 40px;
+        span {
+            font-weight: lighter;
+            color: #41c457;
+        }
+    }
+}
 .hero_image {
     padding-top: 80px;
     background-color: #1F2154;
@@ -140,20 +192,6 @@ export default {
             font-weight: 600;
         }
     } 
-    .button {
-        background-color: #41c457;
-        color: white;
-        border: 1px solid #41c457;
-        border-radius: 5px;
-        padding: 12px 30px;
-        font-size: 12px;
-        font-weight: 600;
-        transition: 0.5s;
-        &:hover {
-            color: #41c457;
-            background-color: white;
-        }
-    }
     svg {
         position: absolute;
         bottom: -6px;
@@ -176,7 +214,7 @@ export default {
             border-radius: 15px;
             left: 50%;
             transform: translate(-50%);
-            box-shadow: 0px 0px 10px #cacaca;
+            box-shadow: 0px 0px 10px #e1e1e1;
             z-index: 1;
         }
         .side_image {
@@ -218,7 +256,7 @@ export default {
         }
     }
 }
-.clients {
+.main_content {
     background-image: url(../assets/images/background-pattern-grid-line.png);
     background-position: center;
     .pb_cont {
@@ -228,6 +266,7 @@ export default {
         padding-top: 200px;
         background-image: url(../assets/images/background-pattern-grid-line.png);
         background-position: center;
+        padding-bottom: 80px;
         .text {
             padding: 0 300px;
             h2 {
@@ -302,7 +341,7 @@ export default {
             height: 60px;
             width: 60px;
             right: -10px;
-            bottom: 140px;
+            top: 470px;
             border: 8px solid #FF8265;
         }
         .rating {
@@ -317,6 +356,49 @@ export default {
             }
             p {
                 color: #696969;
+            }
+        }
+        .services {
+            margin-top: 150px;
+            .card_right {
+                margin-top: 80px;
+            }
+            .card_left,
+            .card_right {
+                .card_clients {
+                    background-color: white;
+                    box-shadow: 0px 0px 10px #e1e1e1;
+                    border-radius: 5px;
+                    width: 270px;
+                    padding-top: 30px;
+                    margin-bottom: 30px;
+                    .card_text_top {
+                        padding: 0 25px;
+                    }
+                    .card_text_bottom {
+                        padding: 20px 25px 15px;
+                    }
+                    h3 {
+                        font-size: 17px;
+                        font-weight: bold;
+                    }
+                    p {
+                        font-size: 15px;
+                        color: #696969;
+                    }
+                }
+            }
+            .text_clients {
+                width: 420px;
+                margin-left: 50px;
+                .main_text {
+                    color: #696969;
+                    i {
+                        color: #41c457;
+                        font-size: 18px;
+                        margin-right: 12px;
+                    }
+                }
             }
         }
     }
