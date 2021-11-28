@@ -139,14 +139,16 @@
                     <h2>Latest Featured <span>Courses</span></h2>
                 </div>
                 <div class="row">
-                    <div class="col-6" v-for="course in courses" :key="course.course">
-                        <div class="card_course d-flex">
+                    <div class="col-6 mb-5" v-for="course in courses" :key="course.course">
+                        <div class="card_course d-flex align-items-center">
                             <div class="image_courses">
-                                <img :src="require(`../assets/images/stock-full-hd-0${course.image}-480x298.jpg`)" alt="Persone al computer che lavorano" class="rounded-circle">
+                                <div class="image_container">
+                                    <img :src="require(`../assets/images/stock-full-hd-0${course.image}-480x298.jpg`)" alt="Persone al computer che lavorano" class="rounded-circle">
+                                </div>
                             </div>
                             <div class="text_course">
                                 <div class="price">
-                                    <p>{{ course.price }}</p>
+                                    <p>{{ course.price }}<span v-if='course.price != "Free"'>.00</span></p>
                                 </div>
                                 <div class="title_course">
                                     <h3>{{ course.title }}</h3>
@@ -159,6 +161,35 @@
                         </div>
                     </div>
                 </div>
+                <div class="view text-center">
+                    <button class="button">View all courses <i class="fas fa-long-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="talk_about">
+            <div class="container">
+                <div class="title text-center">
+                    <h2>Why People Talk About <span>MaxCoach</span>?</h2>
+                </div>
+                <div class="feedback">
+                    <div class="image">
+                        <img src="../assets/images/testimonial-avata-02.jpg" alt="Viso del recensitore">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200px" height="202px" viewBox="0 0 200 202">
+                            <path class="elementor-shape-fill" d="M139.374493,198.087515 C155.702187,206.99353 190.724846,197.001323 197.677982,159.049528 C204.827153,120.027728 184.496324,118.997566 188.045232,104.801934 C202.287755,83.6528313 204.827153,56.662651 190.073179,40.4146034 C153.570125,2.39058926 144.444362,48.0194062 114.025151,20.1351292 C101.727304,7.83728238 83.0989526,-6.73517414 56.2286492,3.40456297 C18.2385839,17.7404371 27.3303985,47.659333 27.3303985,69.3128542 C27.3303985,76.9370868 3.11408002,91.2696589 0.460095291,110.885776 C-2.88628833,135.619549 12.6277797,168.175291 27.3303985,179.329002 C50.6517938,205.692318 86.6478605,199.608476 102.87144,190.482713 C116.802125,182.646702 128.220783,192.003673 139.374493,198.087515 Z"></path>
+                        </svg>
+                        <img src="../assets/images/maxcoach-shape-05.png" alt>
+                    </div>
+                    <div class="text_feedback">
+                        <p>I am free to learn at my own pace, follow my own schedule and choose the subject I like. Great study portal for people like me.</p>
+                        <p class="info">Mina Hollace</p>
+                        <p>/ Freelancer</p>
+                    </div>
+                </div>
+                <div class="brands">
+                    <div class="brand" v-for="brand in brands" :key="brand.brand">
+                        <img :src="require(`../assets/images/client-logo-colored-0${brand}.png`)" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -168,7 +199,8 @@
 export default {
     name: 'SiteMain',
     props: {
-        courses: Array
+        courses: Array,
+        brands: Array
     }
 }
 </script>
@@ -181,7 +213,7 @@ export default {
     border-radius: 5px;
     padding: 15px 35px;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: bold;
     transition: 0.5s;
     &:hover {
         color: #41c457;
@@ -434,11 +466,101 @@ export default {
     .title {
         padding-top: 100px;
     }
-    .image_courses {
+    .image_container {
         width: 170px;
         height: 170px;
         border-radius: 50%;
         margin-right: 30px;
+        img {
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .price {
+        color: #41c457;
+        font-size: 25px;
+        font-weight: bold;
+        p {
+            margin-bottom: 10px;
+        }
+        span {
+            font-size: 18px;
+        }
+    }
+    .title_course {
+        h3 {
+            font-weight: bold;
+            font-size: 20px;
+            padding-right: 100px;
+            margin-bottom: 15px;
+        }
+    }
+    .info_course {
+        display: flex;
+        color: #696969;
+        font-size: 15px;
+        p {
+            margin-right: 30px;
+        }
+    }
+    .view {
+        margin-top: 20px;
+        padding-bottom: 90px;
+        button {
+            padding: 15px 80px;
+        }
+    }
+}
+.talk_about {
+    .title {
+        margin: 80px 0;
+    }
+    .feedback {
+        display: flex;
+        padding: 0 170px;
+        .image {
+            position: relative;
+            margin-right: 100px;
+            img:first-child {
+                border-radius: 50%;
+                position: relative;
+                z-index: 1;
+            }
+            svg {
+                fill: #D2A98E;
+                width: 80%;
+                position: absolute;
+                top: -30px;
+                left: 0;
+            }
+            img:last-child {
+                width: 70%;
+                position: absolute;
+                top: 100px;
+                right: 0;
+            }
+        }
+        .text_feedback {
+            p:first-child {
+                font-size: 34px;
+                line-height: 1.42;
+            }
+            p.info {
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            p:last-child {
+                color: #696969;
+            }
+        }
+    }
+    .brands {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 90px 0;
     }
 }
 </style>
