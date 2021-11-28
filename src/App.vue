@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <SiteHeader :menu="menuHeader"/>
-    <SiteMain/>
+    <SiteMain :courses="cardCourses"/>
     <SiteFooter/>
   </div>
 </template>
@@ -20,7 +20,51 @@ export default {
   },
   data() {
     return {
-      menuHeader: ["Home", "Pages", "Courses", "Features", "Blog", "Shop"]
+      menuHeader: ["Home", "Pages", "Courses", "Features", "Blog", "Shop"],
+      cardCourses: [
+        {
+          image: "1",
+          price: "$40.00",
+          title: "Learning to Write as a Professional Author",
+          lessons: "20",
+          students: "50"
+        },
+        {
+          image: "2",
+          price: "Free",
+          title: "Customer-centric Info-Tech Strategies",
+          lessons: "24",
+          students: "769"
+        },
+        {
+          image: "3",
+          price: "$19.00",
+          title: "Open Programming Courses for Everyone: Python",
+          lessons: "17",
+          students: "62"
+        },
+        {
+          image: "4",
+          price: "$26.00",
+          title: "Academic Listening and Note-taking",
+          lessons: "6",
+          students: "67"
+        },
+        {
+          image: "5",
+          price: "$39.00",
+          title: "Master jQuery in a Short Period of Time",
+          lessons: "6",
+          students: "51",
+        },
+        {
+          image: "6",
+          price: "$59.00",
+          title:  "Introduction to Javascript for Beginners",
+          lessons: "14",
+          students: "76"
+        }
+      ]
     }
   }
 }

@@ -130,10 +130,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="courses">
-                    <div class="title text-center">
-                        <p>Choose a course to get started</p>
-                        <h2>Latest Featured <span>Courses</span></h2>
+            </div>
+        </div>
+        <div class="courses">
+            <div class="container">
+                <div class="title text-center">
+                    <p>Choose a course to get started</p>
+                    <h2>Latest Featured <span>Courses</span></h2>
+                </div>
+                <div class="row">
+                    <div class="col-6" v-for="course in courses" :key="course.course">
+                        <div class="card_course d-flex">
+                            <div class="image_courses">
+                                <img :src="require(`../assets/images/stock-full-hd-0${course.image}-480x298.jpg`)" alt="Persone al computer che lavorano" class="rounded-circle">
+                            </div>
+                            <div class="text_course">
+                                <div class="price">
+                                    <p>{{ course.price }}</p>
+                                </div>
+                                <div class="title_course">
+                                    <h3>{{ course.title }}</h3>
+                                </div>
+                                <div class="info_course">
+                                    <p><i class="far fa-file-alt"></i> {{ course.lessons }} Lessons</p>
+                                    <p><i class="far fa-user"></i> {{ course.students }} Students</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -144,7 +167,9 @@
 <script>
 export default {
     name: 'SiteMain',
-
+    props: {
+        courses: Array
+    }
 }
 </script>
 
@@ -267,6 +292,7 @@ export default {
         background-image: url(../assets/images/background-pattern-grid-line.png);
         background-position: center;
         padding-bottom: 80px;
+        margin-bottom: 115px;
         .text {
             padding: 0 300px;
             h2 {
@@ -401,6 +427,18 @@ export default {
                 }
             }
         }
+    }
+}
+.courses {
+    background-color: #f5f7fa;
+    .title {
+        padding-top: 100px;
+    }
+    .image_courses {
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        margin-right: 30px;
     }
 }
 </style>
