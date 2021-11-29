@@ -192,6 +192,116 @@
                 </div>
             </div>
         </div>
+        <div class="blogs">
+            <div class="container">
+                <div class="title text-center">
+                    <p>Enjoy reading on MaxCoach</p>
+                    <h2>Latest on <span>Our Blogs</span></h2>
+                </div>
+                <div class="row blogs_cards">
+                    <div class="blog_card col-4" v-for="blog in blogs" :key="blog.blog">
+                        <div class="image_blog">
+                            <img :src="require(`../assets/images/artist-blog-0${blog.image}-480x325.jpg`)" alt>
+                        </div>
+                        <div class="text_blog">
+                            <p class="text-uppercase">Artist</p>
+                            <h2>{{ blog.title }}</h2>
+                            <div class="info_blog">
+                                <p><i class="far fa-calendar"></i> May 15, 2020</p>
+                                <p><i class="far fa-eye"></i> {{ blog.views }} views</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="help_you">
+            <div class="container">
+                <div class="title text-center">
+                    <p>Wanna transform your life?</p>
+                    <h2>Glad to <span>Help You</span> Learn</h2>
+                </div>
+                <div class="row">
+                    <div class="card_help_you col-3">
+                        <div class="svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" xml:space="preserve">
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2810beb-line)" stroke-width="2" stroke-miterlimit="10" d="M7,0L7,64" style="stroke-dasharray: 64, 66; stroke-dashoffset: 0;"></path>
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2810beb)" stroke-width="2" stroke-miterlimit="10" d="M32.062,6L26,11L26,35L57,35L51,23L57,11L26,11" style="stroke-dasharray: 121, 123; stroke-dashoffset: 0;"></path>
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2810beb)" stroke-width="2" stroke-miterlimit="10" d="M26,30L7,30L7,6L32,6L32,11" style="stroke-dasharray: 73, 75; stroke-dashoffset: 0;"></path>
+                            </svg>
+                        </div>
+                        <div class="text_help">
+                            <h2>Idea Discussion</h2>
+                            <p>Get teamed up with the specialists who work and teach coding for years at famous universities.</p>
+                        </div>
+                    </div>
+                    <div class="card_help_you col-3">
+                        <div class="svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" xml:space="preserve">
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2812a07)" stroke-width="2" stroke-miterlimit="10" d="M32,1L26,1L26,10L20,12L14,6L6,14L12,20L10,26L1,26L1,38L10,38L12,44L6,50L14,58L20,52L26,54L26,63L32,63L38,63L38,54L44,52L50,58L58,50L52,44L54,38L63,38L63,26L54,26L52,20L58,14L50,6L44,12L38,10L38,1Z" style="stroke-dasharray: 284, 286; stroke-dashoffset: 0;"></path>
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2812a07)" stroke-width="2" stroke-miterlimit="10" d="M26,32A6,6 0,1,1 38,32A6,6 0,1,1 26,32" style="stroke-dasharray: 38, 40; stroke-dashoffset: 0;"></path>
+                            </svg>
+                        </div>
+                        <div class="text_help">
+                            <h2>Web Development</h2>
+                            <p>Learn to start building a webpage from scratch. You decide your own pace, course and speed.</p>
+                        </div>
+                    </div> 
+                    <div class="card_help_you col-3">
+                        <div class="svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" xml:space="preserve">
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2814564)" stroke-width="2" stroke-miterlimit="10" d="M1,32A31,31 0,1,1 63,32A31,31 0,1,1 1,32" style="stroke-dasharray: 195, 197; stroke-dashoffset: 0;"></path>
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2814564)" stroke-width="2" stroke-miterlimit="10" d="M17,32A15,15 0,1,1 47,32A15,15 0,1,1 17,32" style="stroke-dasharray: 95, 97; stroke-dashoffset: 0;"></path>
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2814564-line)" stroke-width="2" stroke-miterlimit="10" d="M26,18L26,1" style="stroke-dasharray: 17, 19; stroke-dashoffset: 0;"></path>
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2814564-line)" stroke-width="2" stroke-miterlimit="10" d="M38,18L38,1" style="stroke-dasharray: 17, 19; stroke-dashoffset: 0;"></path>
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2814564-line)" stroke-width="2" stroke-miterlimit="10" d="M26,63L26,46" style="stroke-dasharray: 17, 19; stroke-dashoffset: 0;"></path>
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2814564-line)" stroke-width="2" stroke-miterlimit="10" d="M38,63L38,46" style="stroke-dasharray: 17, 19; stroke-dashoffset: 0;"></path>
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2814564-line)" stroke-width="2" stroke-miterlimit="10" d="M46,26L63,26" style="stroke-dasharray: 17, 19; stroke-dashoffset: 0;"></path>
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2814564-line)" stroke-width="2" stroke-miterlimit="10" d="M46,38L63,38" style="stroke-dasharray: 17, 19; stroke-dashoffset: 0;"></path>
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2814564-line)" stroke-width="2" stroke-miterlimit="10" d="M1,26L18,26" style="stroke-dasharray: 17, 19; stroke-dashoffset: 0;"></path>
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2814564-line)" stroke-width="2" stroke-miterlimit="10" d="M1,38L18,38" style="stroke-dasharray: 17, 19; stroke-dashoffset: 0;"></path>
+                            </svg>
+                        </div>
+                        <div class="text_help">
+                            <h2>System Administration</h2>
+                            <p>Learners are encouraged to study the mechanism and structure of system administration.</p>
+                        </div>
+                    </div> 
+                    <div class="card_help_you col-3">
+                        <div class="svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" xml:space="preserve">
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2816492)" stroke-width="2" stroke-miterlimit="10" width="62" height="41" d="M1 10 L63 10 L63 51 L1 51 Z" style="stroke-dasharray: 206, 208; stroke-dashoffset: 0;"></path>
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2816492-line)" stroke-width="2" stroke-miterlimit="10" d="M22,63L42,63" style="stroke-dasharray: 20, 22; stroke-dashoffset: 0;"></path>
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2816492-line)" stroke-width="2" stroke-miterlimit="10" d="M32,63L32,51" style="stroke-dasharray: 12, 14; stroke-dashoffset: 0;"></path>
+                                <path fill="none" stroke="url(#svg-gradient61a3dc2816492-line)" stroke-width="2" stroke-miterlimit="10" d="M1,43L64,43" style="stroke-dasharray: 63, 65; stroke-dashoffset: 0;"></path>
+                            </svg>
+                        </div>
+                        <div class="text_help">
+                            <h2>Graphic Design</h2>
+                            <p>Have a passion for graphics and arts? Show your talents with confidence and self-assertiveness.</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="footer_image">
+                    <img src="../assets/images/home-6-services-image.png" alt="Persone al computer">
+                    <div class="ball empty_green"></div>
+                    <div class="ball full_green"></div>
+                    <div class="ball full_orange"></div>
+                </div>
+            </div>
+        </div>
+        <div class="start_online">
+            <div class="container">
+                <div class="text_start text-center">
+                    <p>Start today for getting <span>Online Certification</span></p>
+                    <h3>You can be your own guiding star with our help!</h3>
+                    <button class="button">Get started now</button>
+                </div>
+            </div>
+            <div class="ball full_red"></div>
+            <div class="ball full_yellow"></div>
+            <div class="ball full_blue"></div>
+        </div>
     </main>
 </template>
 
@@ -200,7 +310,9 @@ export default {
     name: 'SiteMain',
     props: {
         courses: Array,
-        brands: Array
+        brands: Array,
+        blogs: Array,
+        helpYous: Array
     }
 }
 </script>
@@ -211,8 +323,8 @@ export default {
     color: white;
     border: 1px solid #41c457;
     border-radius: 5px;
-    padding: 15px 35px;
-    font-size: 12px;
+    padding: 15px 40px;
+    font-size: 14px;
     font-weight: bold;
     transition: 0.5s;
     &:hover {
@@ -235,6 +347,11 @@ export default {
             color: #41c457;
         }
     }
+}
+.ball {
+    position: absolute;
+    border-radius: 50%;
+    filter: opacity(0.5);
 }
 .hero_image {
     padding-top: 80px;
@@ -271,7 +388,7 @@ export default {
             border-radius: 15px;
             left: 50%;
             transform: translate(-50%);
-            box-shadow: 0px 0px 10px #e1e1e1;
+            box-shadow: 0px 0px 10px #a0a0a0;
             z-index: 1;
         }
         .side_image {
@@ -295,11 +412,12 @@ export default {
         }
     }
     .icons {
-        position: absolute;
+        position: fixed;
         z-index: 1;
         right: 0;
         top: 100px;
         background-color: white;
+        box-shadow: 0px 0px 10px #a0a0a0;
         color: black;
         font-size: 14px;
         border-top-left-radius: 5px;
@@ -336,11 +454,6 @@ export default {
                 font-size: 14px;
             }
         }
-        .ball {
-            position: absolute;
-            border-radius: 50%;
-            filter: opacity(0.5);
-        }
         .full_green {
             height: 25px;
             width: 50px;
@@ -367,8 +480,8 @@ export default {
             filter: opacity(0.7);
         }
         .full_red {
-            height: 30px;
-            width: 30px;
+            height: 35px;
+            width: 35px;
             background-color: #e25a6d;
             right: 0;
             top: 230px;
@@ -382,9 +495,10 @@ export default {
             top: 260px;
         }
         .full_blue {
-            height: 30px;
-            width: 30px;
-            background-color: #1f9efb;
+            height: 35px;
+            width: 35px;
+            background-color: #AAB8F1;
+            filter: opacity(1);
             top: 350px;
             right: 200px;
         }
@@ -561,6 +675,152 @@ export default {
         justify-content: space-around;
         align-items: center;
         margin: 90px 0;
+    }
+}
+.blogs {
+    background-color: #f8f8f8;
+    padding-bottom: 80px;
+    .title {
+        padding: 100px 0 50px;
+    }
+    .blog_card {
+        .image_blog {
+            margin-bottom: 30px;
+            img {
+                width: 100%;
+                border-radius: 6px;
+            }
+        }
+        .text_blog {
+            p {
+                color: #696969;
+            }
+            h2 {
+                font-size: 24px;
+                font-weight: bold;
+                padding-right: 45px;
+            }
+            .info_blog {
+                display: flex;
+                font-size: 15px;
+                p {
+                    margin-right: 25px;
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+.help_you {
+    background-image: linear-gradient(white, #f5f7fa);
+    .title {
+        padding-top: 80px;
+        margin-bottom: 86px;
+    }
+    .card_help_you {
+        .svg {
+            margin-bottom: 20px;
+            path {
+                stroke: currentColor;
+            }
+        }
+        .text_help {
+            h2 {
+                font-size: 20px;
+                font-weight: bold;
+            }
+            p {
+                font-size: 15px;
+                color: #696969;
+                padding-right: 60px;
+            }
+        }
+    }
+    .footer_image {
+        height: 449px;
+        margin-top: 125px;
+        position: relative;
+        img {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            top: 30px;
+        }
+        .empty_green {
+            height: 55px;
+            width: 55px;
+            border: 6px solid #1fad96;
+            filter: opacity(0.3);
+            left: 40px;
+            top: -40px;
+        }
+        .full_green {
+            height: 50px;
+            width: 50px;
+            background-color: #1fad96;
+            filter: opacity(0.3);
+            right: 0;
+            top: 10px;
+        }
+        .full_orange {
+            height: 35px;
+            width: 35px;
+            background-color: #FA7D61;
+            filter: opacity(1);
+            top: 350px;
+            left: -180px;
+        }
+    }
+}
+.start_online {
+    position: relative;
+    .text_start {
+        padding: 127px 0 100px;
+        font-weight: bold;
+        p {
+            font-size: 24px;
+            margin-bottom: 0;
+            span {
+                color: #1fad96;
+                font-weight: lighter;
+            }
+        }
+        h3 {
+            font-size: 34px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        button {
+            padding: 15px 80px;
+        }
+    }
+    .full_red {
+        height: 40px;
+        width: 40px;
+        background-color: #e25a6d;
+        filter: opacity(0.8);
+        right: 400px;
+        top: 10px;
+    }
+    .full_yellow {
+        height: 60px;
+        width: 60px;
+        background-color: #febc4d;
+        filter: opacity(1);
+        top: 50%;
+        transform: translateY(-50%);
+        left: 120px;
+    }
+    .full_blue {
+        height: 30px;
+        width: 30px;
+        background-color: #AAB8F1;
+        filter: opacity(1);
+        top: 50%;
+        transform: translateY(-50%);
+        right: 200px;
     }
 }
 </style>

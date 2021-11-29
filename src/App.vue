@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <SiteHeader :menu="menuHeader"/>
-    <SiteMain :courses="cardCourses" :brands="brands"/>
+    <SiteMain :courses="cardCourses" :brands="brands" :blogs="blogs"/>
     <SiteFooter/>
   </div>
 </template>
@@ -65,7 +65,24 @@ export default {
           students: "76"
         }
       ],
-      brands: ["1", "2", "3", "4", "5", "6"]
+      brands: ["1", "2", "3", "4", "5", "6"],
+      blogs: [
+        {
+          image: "1",
+          title: "Brush Strokes Energize Trees in Paintings",
+          views: "688"
+        },
+        {
+          image: "2",
+          title: "Pocket-Sized Notebooks Hold Miniature Paintings",
+          views: "603"
+        },
+        {
+          image: "3",
+          title: "Connection Between Self-Portraits and Identity",
+          views: "397"
+        },
+      ]
     }
   }
 }
