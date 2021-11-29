@@ -148,7 +148,7 @@
                             </div>
                             <div class="text_course">
                                 <div class="price">
-                                    <p>{{ course.price }}<span v-if='course.price != "Free"'>.00</span></p>
+                                    <p>{{ course.price }}<span v-if="course.price != 'Free'">.00</span></p>
                                 </div>
                                 <div class="title_course">
                                     <h3>{{ course.title }}</h3>
@@ -571,6 +571,12 @@ export default {
                         margin-right: 12px;
                     }
                 }
+                button { 
+                    &:hover {
+                        color: white;
+                        background-color: #1F2154;
+                    }
+                }
             }
         }
     }
@@ -579,6 +585,19 @@ export default {
     background-color: #f5f7fa;
     .title {
         padding-top: 100px;
+    }
+    .card_course {
+        padding: 20px 0 20px 20px;
+        margin-right: 72px;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+            background-color: white;
+            .title_course {
+                transition: 0.5s;
+                color: #41c457;
+            }
+        }
     }
     .image_container {
         width: 170px;
@@ -607,7 +626,6 @@ export default {
         h3 {
             font-weight: bold;
             font-size: 20px;
-            padding-right: 100px;
             margin-bottom: 15px;
         }
     }
@@ -624,6 +642,10 @@ export default {
         padding-bottom: 90px;
         button {
             padding: 15px 80px;
+            &:hover {
+                color: white;
+                background-color: #1F2154;
+            }
         }
     }
 }
@@ -794,6 +816,10 @@ export default {
         }
         button {
             padding: 15px 80px;
+            &:hover {
+                color: white;
+                background-color: #1F2154;
+            }
         }
     }
     .full_red {

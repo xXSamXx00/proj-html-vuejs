@@ -2,7 +2,7 @@
   <div id="app">
     <SiteHeader :menu="menuHeader"/>
     <SiteMain :courses="cardCourses" :brands="brands" :blogs="blogs"/>
-    <SiteFooter/>
+    <SiteFooter :explore="exploreFooter" :information="informationFooter"/>
   </div>
 </template>
 
@@ -82,7 +82,9 @@ export default {
           title: "Connection Between Self-Portraits and Identity",
           views: "397"
         },
-      ]
+      ],
+      exploreFooter: ["Start here", "Blog", "About us", "Success story", "Courses", "Contact us"],
+      informationFooter: ["Membership", "Purchase", "Privacy policy", "Terms of service"]
     }
   }
 }
