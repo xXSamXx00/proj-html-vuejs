@@ -397,6 +397,7 @@ export default {
             transform: translate(-50%);
             box-shadow: 0px 0px 10px #a0a0a0;
             z-index: 1;
+            cursor: pointer;
         }
         .side_image {
             height: 100%;
