@@ -1,8 +1,9 @@
 <template>
-    <header>
+    <header :class="{change_color: scrollPosition > 600}">
         <div class="container p-4">
             <div class="logo">
-                <a href="#"><img height="30" src="../assets/images/light-logo.png" alt="Logo"></a>
+                <a href="#" v-show="scrollPosition <= 600"><img height="30" src="../assets/images/light-logo.png" alt="Logo"></a>
+                <a href="#" v-show="scrollPosition > 600"><img height="30" src="../assets/images/dark-logo.png" alt="Logo"></a>
             </div>
             <nav class="d-flex align-items-center">
                 <ul class="d-flex">
@@ -30,13 +31,54 @@ export default {
     name: 'SiteHeader',
     props: {
         menu: Array
+    },
+    data() {
+        return {
+            scrollPosition: null
+        }
+    },
+    methods: {
+        uptadeScroll() {
+            this.scrollPosition = window.scrollY
+        }
+    },
+    mounted() {
+        window.addEventListener("scroll", this.uptadeScroll)
     }
 }
 </script>
 
 <style lang="scss">
+.change_color {
+    background-color: white;
+    box-shadow: 0px 0px 10px #a0a0a0;
+    .zero {
+        color: white !important;
+        background-color: black !important;
+    }
+    a {
+        color: #212529;
+        &:hover {
+            color: #41c457;
+        }
+    }
+    input {
+        background-color: #f5f5f5 !important;
+    }
+    button {
+        background-color: #f5f5f5 !important;
+        &:hover {
+            background-color: #41c457 !important;
+            color: white;
+        }
+    }
+}
 header {
     background-color: #1F2154;
+    position: fixed;
+    width: 100%;
+    transition: 1s;
+    z-index: 2;
     a {
         color: white;
         text-decoration: none;
@@ -49,6 +91,7 @@ header {
         align-items: center;
         justify-content: space-between;
         ul {
+            list-style: none;
             margin: 0;
             li {
                 a {
@@ -79,22 +122,30 @@ header {
         }
         input {
             color: #696969;
-            border: 1px solid white;
+            border: none;
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
-            background: white;
+            background-color: white;
             height: 48px;
             width: 50%;
             padding-left: 20px;
+            &:focus-visible {
+                outline: 0px solid transparent;
+            }
         }
         button {
-            border: 1px solid white;
+            border: none;
             background-color: white;
             color: #41c457;
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
             height: 48px;
             width: 48px;
+            transition: 1s;
+            &:hover {
+                background-color: #41c457;
+                color: white;
+            }
         }
     }
 }   

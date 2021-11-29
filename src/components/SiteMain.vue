@@ -357,15 +357,22 @@ export default {
     padding-top: 80px;
     background-color: #1F2154;
     color: white;
-    height: 650px;
+    height: 770px;
     position: relative;
     .text {
         position: relative;
         z-index: 1;
+        padding-top: 100px;
         h1 {
+            font-size: 48px;
             font-weight: 600;
         }
-    } 
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
     svg {
         position: absolute;
         bottom: -6px;
@@ -415,7 +422,7 @@ export default {
         position: fixed;
         z-index: 1;
         right: 0;
-        top: 100px;
+        top: 250px;
         background-color: white;
         box-shadow: 0px 0px 10px #a0a0a0;
         color: black;
